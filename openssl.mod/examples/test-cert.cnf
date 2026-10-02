@@ -1,0 +1,20 @@
+# Public configuration only; contains no certificate or private key.
+# SPDX-License-Identifier: MIT
+[req]
+prompt = no
+distinguished_name = subject
+x509_extensions = server
+
+[subject]
+CN = localhost
+
+[server]
+basicConstraints = critical,CA:FALSE
+keyUsage = critical,digitalSignature,keyEncipherment
+extendedKeyUsage = serverAuth
+subjectAltName = @names
+
+[names]
+DNS.1 = localhost
+IP.1 = 127.0.0.1
+IP.2 = ::1

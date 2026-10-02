@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.key
+*.pem
+*.p12
+*.pfx
+openssl.mod/tests/driver-debug
+openssl.mod/tests/driver-release
+openssl.mod/examples/client
+openssl.mod/examples/server

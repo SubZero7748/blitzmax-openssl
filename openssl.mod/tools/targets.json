@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "opensslVersion": "3.5.8",
+  "targets": [
+    {
+      "id": "win32.x64",
+      "condition": "win32 And x64",
+      "openssl": "mingw64",
+      "kind": "windows",
+      "tested": true
+    },
+    {
+      "id": "win32.x86",
+      "condition": "win32 And x86",
+      "openssl": "mingw",
+      "kind": "windows",
+      "tested": false
+    },
+    {
+      "id": "win32.arm64",
+      "condition": "win32 And (arm64 Or armv64)",
+      "openssl": "VC-WIN64-ARM",
+      "kind": "manual",
+      "tested": false
+    },
+    {
+      "id": "win32.armv7",
+      "condition": "win32 And armv7",
+      "openssl": "VC-WIN32-ARM",
+      "kind": "manual",
+      "tested": false
+    },
+    {
+      "id": "linux.x64",
+      "condition": "linux And Not (raspberrypi Or android) And x64",
+      "openssl": "linux-x86_64",
+      "kind": "desktop",
+      "tested": true
+    },
+    {
+      "id": "linux.x86",
+      "condition": "linux And Not (raspberrypi Or android) And x86",
+      "openssl": "linux-x86",
+      "kind": "desktop",
+      "tested": false
+    },
+    {
+      "id": "linux.arm",
+      "condition": "linux And Not (raspberrypi Or android) And (arm Or armv7)",
+      "openssl": "linux-armv4",
+      "kind": "desktop",
+      "tested": false
+    },
+    {
+      "id": "linux.arm64",
+      "condition": "linux And Not (raspberrypi Or android) And arm64",
+      "openssl": "linux-aarch64",
+      "kind": "desktop",
+      "tested": false
+    },
+    {
+      "id": "linux.riscv32",
+      "condition": "linux And Not android And riscv32",
+      "openssl": "linux32-riscv32",
+      "kind": "desktop",
+      "tested": false
+    },
+    {
+      "id": "linux.riscv64",
+      "condition": "linux And Not android And riscv64",
+      "openssl": "linux64-riscv64",
+      "kind": "desktop",
+      "tested": false
+    },
+    {
+      "id": "raspberrypi.arm",
+      "condition": "raspberrypi And (arm Or armv7)",
+      "openssl": "linux-armv4",
+      "kind": "desktop",
+      "tested": false
+    },
+    {
+      "id": "raspberrypi.arm64",
+      "condition": "raspberrypi And arm64",
+      "openssl": "linux-aarch64",
+      "kind": "desktop",
+      "tested": false
+    },
+    {
+      "id": "macos.x64",
+      "condition": "macos And Not ios And x64",
+      "openssl": "darwin64-x86_64",
+      "kind": "desktop",
+      "tested": false
+    },
+    {
+      "id": "macos.arm64",
+      "condition": "macos And Not ios And arm64",
+      "openssl": "darwin64-arm64",
+      "kind": "desktop",
+      "tested": false
+    },
+    {
+      "id": "haiku.x86",
+      "condition": "haiku And x86",
+      "openssl": "haiku-x86",
+      "kind": "desktop",
+      "tested": false
+    },
+    {
+      "id": "haiku.x64",
+      "condition": "haiku And x64",
+      "openssl": "haiku-x86_64",
+      "kind": "desktop",
+      "tested": false
+    },
+    {
+      "id": "android.armv7",
+      "condition": "android And (arm Or armv7 Or armeabi Or armeabiv7a) And Not arm64v8a",
+      "openssl": "android-arm",
+      "kind": "mobile",
+      "tested": false
+    },
+    {
+      "id": "android.arm64",
+      "condition": "android And (arm64 Or arm64v8a)",
+      "openssl": "android-arm64",
+      "kind": "mobile",
+      "tested": false
+    },
+    {
+      "id": "android.x86",
+      "condition": "android And x86",
+      "openssl": "android-x86",
+      "kind": "mobile",
+      "tested": false
+    },
+    {
+      "id": "android.x64",
+      "condition": "android And x64",
+      "openssl": "android-x86_64",
+      "kind": "mobile",
+      "tested": false
+    },
+    {
+      "id": "android.riscv64",
+      "condition": "android And riscv64",
+      "openssl": "android-riscv64",
+      "kind": "mobile",
+      "tested": false
+    },
+    {
+      "id": "ios.armv7",
+      "condition": "ios And armv7",
+      "openssl": "ios-xcrun",
+      "kind": "mobile",
+      "tested": false
+    },
+    {
+      "id": "ios.arm64",
+      "condition": "ios And arm64 And Not openssl_ios_simulator",
+      "openssl": "ios64-xcrun",
+      "kind": "mobile",
+      "tested": false
+    },
+    {
+      "id": "ios.simulator.x86",
+      "condition": "ios And x86",
+      "openssl": "iossimulator-i386-xcrun",
+      "kind": "mobile",
+      "tested": false
+    },
+    {
+      "id": "ios.simulator.x64",
+      "condition": "ios And x64",
+      "openssl": "iossimulator-x86_64-xcrun",
+      "kind": "mobile",
+      "tested": false
+    },
+    {
+      "id": "ios.simulator.arm64",
+      "condition": "ios And arm64 And openssl_ios_simulator",
+      "openssl": "iossimulator-arm64-xcrun",
+      "kind": "mobile",
+      "tested": false
+    },
+    {
+      "id": "nx.arm64",
+      "condition": "nx",
+      "openssl": null,
+      "kind": "manual",
+      "tested": false
+    }
+  ]
+}

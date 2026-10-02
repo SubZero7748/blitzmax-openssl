@@ -1,0 +1,10 @@
+.bmx/
+*.a
+*.i
+*.i2
+*.exe
+*.dll
+deps/
+__pycache__/
+tests/results/
+examples/test-certs/
